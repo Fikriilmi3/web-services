@@ -3,24 +3,20 @@ defined('BASEPATH') OR exit ('No direct script access allowed');
 
 class M_dashboard extends CI_Model {
 
-    public function total_buku()
+    public function total_user()
     {
-        return $this->db->get('buku')->num_rows();
+        return $this->db->get('user')->num_rows();
     }
 
-    public function total_penyunting()
+    public function total_soal()
     {
-        return $this->db->get('penyunting')->num_rows();
+        return $this->db->get('tb_soal')->num_rows();
     }
 
-    public function total_penerbit()
+    public function total_hasil()
     {
-        return $this->db->get('penerbit')->num_rows();
+        return $this->db->get('tb_hasil')->num_rows();
     }
 
-    public function total_feedback()
-    {
-        return $this->db->get('feedback')->num_rows();
-    }
 }
 ?>

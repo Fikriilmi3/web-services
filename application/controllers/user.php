@@ -27,12 +27,6 @@ class User Extends CI_Controller{
     public function simpan()
     {
         $data = array(
-            // 'id' => $this->input->post('id'),
-            // 'nama' => $this->input->post('nama'),
-            // 'username' => $this->input->post('username'),
-            // 'password' => $this->input->post('password'),
-            // 'level' => $this->input->post('level')
-
             'id' => $this->input->post('id'),
             'username' => $this->input->post('username'),
             'nama_anak' => $this->input->post('nama_anak'),
@@ -41,10 +35,9 @@ class User Extends CI_Controller{
             'tgl_lahir' => $this->input->post('tgl_lahir'),
             'nama_ibu' => $this->input->post('nama_ibu'),
             'telepone' => $this->input->post('telepone'),
-            'password' => $this->input->post('password'),
+            'password' => md5($this->input->post('password')),
 
         );
-        // $query = $this->db->insert('login', $data);
         $query = $this->db->insert('user', $data);
         if($query = true){
             $this->session->set_flashdata('info', 'Data User Berhasil Disimpan');
@@ -65,12 +58,6 @@ class User Extends CI_Controller{
         $id = $this->input->post('id');
 
         $data = array(
-            // 'id' => $this->input->post('id'),
-            // 'nama' => $this->input->post('nama'),
-            // 'username' => $this->input->post('username'),
-            // 'password' => $this->input->post('password'),
-            // 'level' => $this->input->post('level')
-
             'id' => $this->input->post('id'),
             'username' => $this->input->post('username'),
             'nama_anak' => $this->input->post('nama_anak'),
@@ -79,7 +66,7 @@ class User Extends CI_Controller{
             'tgl_lahir' => $this->input->post('tgl_lahir'),
             'nama_ibu' => $this->input->post('nama_ibu'),
             'telepone' => $this->input->post('telepone'),
-            'password' => $this->input->post('password'),
+            'password' => md5($this->input->post('password')),
 
         );
         $query = $this->m_user->update($id, $data);
@@ -93,7 +80,7 @@ class User Extends CI_Controller{
     {
         $query = $this->m_user->delete($id);
         if($query = true){
-            $this->session->set_flashdata('info', 'Data Penerbit Berhasil Didelete');
+            $this->session->set_flashdata('info', 'Data User Berhasil Didelete');
             redirect('user');
         }
     }

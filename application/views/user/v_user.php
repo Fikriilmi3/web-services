@@ -6,9 +6,9 @@
                   <p class="card-description">
                     Data User
                   </p>
+                  <hr>
                   <div class="row">
-                    <br>
-    <div class="col-md-6">
+                  <div class="col-md-6">
         <a href="<?= base_url() ?>user/tambah_user" class="btn btn-success"><i></i> Tambah User</a>
     </div>
 
@@ -16,7 +16,8 @@
                     <table class="table table-bordered">
                     <thead>
                             <tr>
-                                    <th>Id</th>
+                                    <th>No</th>
+                                    <!-- <th>id User</th> -->
                                     <th>Username</th>
                                     <th>Nama Anak</th>
                                     <th>Jenis Kelamin</th>
@@ -33,8 +34,8 @@
                                     $no = 1;
                                 foreach($data as $row) {?>
                                     <tr>
-
-                                        <td><?= $row->id; ?></td>
+                                        <td><?= $no++; ?></td>
+                                        <!-- <td><?= $row->id; ?></td> -->
                                         <td><?= $row->username;?></td>
                                         <td><?= $row->nama_anak;?></td>
                                         <td><?= $row->jenis_kelamin;?></td>

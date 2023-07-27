@@ -95,7 +95,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Tanggal Lahir</label>
-                    <input type="text" name="tgl_lahir" id="tgl_lahir" class="form-control" placeholder="Input Tanggal Lahir (thn-bln-tgl)" required>
+                    <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control" placeholder="Input Tanggal Lahir (thn-bln-tgl)" required>
+                    <!-- <button id="btn_tgl_lahir" type="button" class="btn btn-primary">Pilih Tanggal</button> -->
                     <script>
                     $(document).ready(function() {
                         $("#tgl_lahir").datepicker({
@@ -104,9 +105,13 @@
                             changeYear: true,
                             yearRange: "1900:2023" // Sesuaikan dengan range tahun yang diinginkan
                         });
+                        $("#btn_tgl_lahir").click(function() {
+                          $("#tgl_lahir").datepicker("show");
+                        });
                     });
                     </script>
                 </div>
+
                 <div class="form-group">
                     <label for="exampleInputName1">Nama Ibu</label>
                     <input type="text" name="nama_ibu" class="form-control" placeholder="Input Nama Ibu" required>

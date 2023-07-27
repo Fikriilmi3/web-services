@@ -26,14 +26,14 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-8" href="index.html"><img src="<?= base_url()?>assets/gambar/balitapp.jpg" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?= base_url()?>assets/gambar/balitapp.jpg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-8" href=""><img src="<?= base_url()?>assets/gambar/login.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href=""><img src="<?= base_url()?>assets/gambar/login.png" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="icon-menu"></span>
         </button>
-        <ul class="navbar-nav mr-lg-2">
+        <!-- <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
               <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
@@ -44,7 +44,7 @@
               <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
             </div>
           </li>
-        </ul>
+        </ul> -->
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
             
@@ -116,7 +116,7 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center ">
-            <center><span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©2022 BPS Kota Malang</a> All rights reserved.</span></center>
+            <center><span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©2023 BalitApp</a> All rights reserved.</span></center>
             
           </div>
         </footer> 

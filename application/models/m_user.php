@@ -5,11 +5,9 @@ class M_user extends CI_Model{
 
     public function generate_id_user()
     {
-        // $this->db->select('RIGHT(login.id,3) as kode', false);
         $this->db->select('RIGHT(user.id,3) as kode', false);
         $this->db->order_by('id','desc');
         $this->db->limit(1);
-        // $query = $this->db->get('login');
         $query = $this->db->get('user');
         if ($query->num_rows() > 0){
             $data = $query->row();
@@ -19,21 +17,18 @@ class M_user extends CI_Model{
         }
 
         $kodemax = str_pad($kode,3,"0", STR_PAD_LEFT);
-        // $kodejadi = "A".$kodemax;
         $kodejadi = "U".$kodemax;
         return $kodejadi;
     }
 
     public function getAllDataUser()
     {
-        // return $this->db->get('login')->result();
         return $this->db->get('user')->result();
     }
 
     public function edit($id)
     {
         $this->db->select('*');
-        // $this->db->from('login');
         $this->db->from('user');
         $this->db->where('id', $id);
         return $this->db->get()->row_array();
@@ -42,14 +37,12 @@ class M_user extends CI_Model{
     public function update($id, $data)
     {
         $this->db->where('id', $id);
-        // $this->db->update('login', $data);
         $this->db->update('user', $data);
     }
 
     public function delete($id)
     {
         $this->db->where('id', $id);
-        // $this->db->delete('login');
         $this->db->delete('user');
     }
 }

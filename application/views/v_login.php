@@ -30,14 +30,16 @@
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
             
               <div class="brand-logo text-center">
-                <img src="<?= base_url()?>assets/gambar/balitapp.jpg" alt="logo">
+                <img src="<?= base_url()?>assets/gambar/login.png" alt="logo">
               </div>
 
               <?= $this->session->flashdata('info');?>
 
               <div class="text-center">  
               <b><h4>Login BalitApp</h4></b>
-               <!-- <b><h5 class="font-weight-light">Perpustakaan BPS Kota Malang</h5></b> -->
+              <br>
+              <b><h6 class="font-weight-light">Login : admin</h6></b>
+              <b><h6 class="font-weight-light">Password : 1234</h6></b>
               </div>
               <br>
                 <form method="post" action="<?= base_url()?>c_login" class="admin"> 

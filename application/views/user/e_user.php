@@ -113,7 +113,7 @@
                 
                 <div class="form-group">
                     <label for="exampleInputName1">Tanggal Lahir</label>
-                    <input type="text" name="tgl_lahir" id="tgl_lahir" value="<?= $user['tgl_lahir'];?>" class="form-control" placeholder="Input Tanggal Lahir" required>
+                    <input type="date" name="tgl_lahir" id="tgl_lahir" value="<?= $user['tgl_lahir'];?>" class="form-control" placeholder="Input Tanggal Lahir" required>
                     <script>
                     $(document).ready(function() {
                         $("#tgl_lahir").datepicker({
@@ -121,6 +121,9 @@
                             changeMonth: true,
                             changeYear: true,
                             yearRange: "1900:2023" // Sesuaikan dengan range tahun yang diinginkan
+                        });
+                        $("#btn_tgl_lahir").click(function() {
+                          $("#tgl_lahir").datepicker("show");
                         });
                     });
                     </script>
@@ -135,7 +138,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputName1">Password</label>
-                    <input type="text" name="password"  value="<?= $user['password'];?>" class="form-control" placeholder="Input Password" required>
+                    <input type="text" name="password"  value="<?= $user['password'];?>" class="form-control" placeholder="Input Nomor Telepone" required>
                 </div>
         
                 <div class="form-group">
