@@ -54,17 +54,17 @@ class Hasil Extends CI_Controller{
 
     public function delete($id)
     {
-    //     // $query = $this->m_hasil->delete($id);
-    //     // if($query = true){
-    //     //     $this->session->set_flashdata('info', 'Data Hasil Berhasil Dihapus');
-    //     //     redirect('hasil');
+        $query = $this->m_hasil->delete($id);
+        if($query = true){
+            $this->session->set_flashdata('info', 'Data Hasil Berhasil Dihapus');
+            redirect('hasil');
     //     // }
-        $_id = $this->db->get_where('tb_hasil',['id'=>$id])->row();
-        $query = $this->db->delete('tb_hasil',['id'=>$id]);
-        if ($query = true) {
-            // unlink('assets/buku/gambar'.$_id->gambar);
-            $this->session->set_flashdata('info', 'Data Berhasil Dihapus!');
-            redirect('hasil', 'refresh');
+        // $_id = $this->db->get_where('tb_hasil',['id'=>$id])->row();
+        // $query = $this->db->delete('tb_hasil',['id'=>$id]);
+        // if ($query = true) {
+        //     // unlink('assets/buku/gambar'.$_id->gambar);
+        //     $this->session->set_flashdata('info', 'Data Berhasil Dihapus!');
+        //     redirect('hasil', 'refresh');
         }
     }
 

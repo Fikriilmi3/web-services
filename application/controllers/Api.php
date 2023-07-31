@@ -29,14 +29,16 @@ class Api extends CI_Controller
 				    'password' => $userLoggedIn['password'],
 				    'status_login' => true
                 ];
+                $json = json_encode($data, JSON_PRETTY_PRINT);
+                echo $json;
             } else {
                 $data = [
                     'message' => 'Username atau password salah',
-				    'status_login' => false
+                    'status_login' => false
                 ];
-			}
-            $json = json_encode($data, JSON_PRETTY_PRINT);
-			echo $json;
+                $json = json_encode($data, JSON_PRETTY_PRINT);
+                echo $json;
+            }
         } else {
             $this->responsejson->send_response_json(['message' => 'Invalid request'], 400);
         }
